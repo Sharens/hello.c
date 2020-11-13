@@ -1,8 +1,5 @@
-// C program to implement linear
-// search in unsorted array
 #include<stdio.h>
 
-// Function to implement search operation
 int findElement(int arr[], int n,
 				int key)
 {
@@ -14,14 +11,13 @@ int findElement(int arr[], int n,
 	return -1;
 }
 
-// Driver Code
 int main()
 {
 	int arr[] = {12, 34, 10, 6, 40};
 	int n = sizeof(arr) / sizeof(arr[0]);
 
-	// Using a last element as search element
-	int key = 6;
+
+	int key = 6; //element którego szukamy 
 	int position = findElement(arr, n, key);
 
 	if (position == - 1)
