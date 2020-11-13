@@ -1,14 +1,33 @@
-#include <stdio.h>
+// C program to implement linear
+// search in unsorted array
+#include<stdio.h>
 
-int main(void)
+// Function to implement search operation
+int findElement(int arr[], int n,
+				int key)
 {
-    int dlugosc, wysokosc, pole_trojkata;
-    dlugosc = 2;
-    wysokosc = 3;
+	int i;
+	for (i = 0; i < n; i++)
+		if (arr[i] == key)
+			return i;
 
-    pole_trojkata = (dlugosc * wysokosc)/2;
-    printf("pole trójkąta wynosi %d",pole_trojkata);
+	return -1;
+}
 
-    return 0;
+// Driver Code
+int main()
+{
+	int arr[] = {12, 34, 10, 6, 40};
+	int n = sizeof(arr) / sizeof(arr[0]);
 
+	// Using a last element as search element
+	int key = 6;
+	int position = findElement(arr, n, key);
+
+	if (position == - 1)
+		printf("Element not found");
+	else
+		printf("Element Found at Position: %d", position + 1 );
+
+	return 0;
 }
